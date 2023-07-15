@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
     "start:dev": "nodemon --watch 'src/' --exec 'ts-node src/index.ts' -e ts",
     "husky:prepare": "husky install",
     "test": "jest --passWithNoTests",
     "test:dev": "yarn test --watch",
-    "test:staged": "yarn test --findRelatedTests"
+    "test:staged": "yarn test --findRelatedTests",
+    "test:push": "yarn test --coverage"
   },
   "author": "Matheus Cortez",
   "license": "ISC",
